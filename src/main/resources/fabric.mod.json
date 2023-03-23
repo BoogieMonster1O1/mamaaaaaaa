@@ -1,16 +1,18 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "mamaaaaaaa",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Mamaaaaaaa",
+  "description": "Replaces all hurt sounds with lyrics from Bohemian Rhapsody.",
   "authors": [
-    "Me!"
+    "BoogieMonster1O1",
+    "heftymouse"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/BoogieMonster1O1/mamaaaaaaa",
+    "sources": "https://github.com/BoogieMonster1O1/mamaaaaaaa",
+    "issues": "https://github.com/BoogieMonster1O1/mamaaaaaaa/issues"
   },
 
   "license": "CC0-1.0",
@@ -19,11 +21,11 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "io.github.boogiemonster1o1.mamaaaaaaa.Mamaaaaaaa"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "mamaaaaaaa.mixins.json"
   ],
 
   "depends": {
@@ -33,6 +35,6 @@
     "java": ">=17"
   },
   "suggests": {
-    "another-mod": "*"
+    "flamingo": "*"
   }
 }
