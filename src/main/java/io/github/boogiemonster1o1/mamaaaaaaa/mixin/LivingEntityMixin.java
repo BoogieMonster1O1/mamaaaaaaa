@@ -24,7 +24,7 @@ public abstract class LivingEntityMixin extends Entity {
 		super(type, world);
 	}
 
-	@Redirect(method = "playHurtSound", at = @At(value = "INVOKE_ASSIGN", target = "Lnet/minecraft/entity/LivingEntity;getHurtSound(Lnet/minecraft/entity/damage/DamageSource;)Lnet/minecraft/sound/SoundEvent;"))
+	@Redirect(method = "playHurtSound", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;getHurtSound(Lnet/minecraft/entity/damage/DamageSource;)Lnet/minecraft/sound/SoundEvent;"))
 	public SoundEvent replaceHurtSound(LivingEntity instance, DamageSource source) {
 		if (this.getDamageTracker().getMostRecentDamage().getDamage() > this.getHealth()) {
 			return Mamaaaaaaa.ENTITY_ALMOST_DEAD;
@@ -32,12 +32,12 @@ public abstract class LivingEntityMixin extends Entity {
 		return Mamaaaaaaa.ENTITY_HURT;
 	}
 
-	@Redirect(method = "handleStatus", at = @At(value = "INVOKE_ASSIGN", target = "Lnet/minecraft/entity/LivingEntity;getDeathSound()Lnet/minecraft/sound/SoundEvent;"))
+	@Redirect(method = "handleStatus", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;getDeathSound()Lnet/minecraft/sound/SoundEvent;"))
 	public SoundEvent replaceDeathSound1(LivingEntity instance) {
 		return Mamaaaaaaa.ENTITY_DEATH;
 	}
 
-	@Redirect(method = "damage", at = @At(value = "INVOKE_ASSIGN", target = "Lnet/minecraft/entity/LivingEntity;getDeathSound()Lnet/minecraft/sound/SoundEvent;"))
+	@Redirect(method = "damage", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;getDeathSound()Lnet/minecraft/sound/SoundEvent;"))
 	public SoundEvent replaceDeathSound2(LivingEntity instance) {
 		return Mamaaaaaaa.ENTITY_DEATH;
 	}

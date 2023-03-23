@@ -1,0 +1,20 @@
+{
+  "entity.hurt": {
+    "subtitle": "subtitles.entity.hurt",
+    "sounds": [
+      "mamaaaaaaa:hurt"
+    ]
+  },
+  "entity.almost_dead": {
+    "subtitle": "subtitles.entity.almost_dead",
+    "sounds": [
+      "mamaaaaaaa:almost"
+    ]
+  },
+  "entity.death": {
+    "subtitle": "subtitles.entity.hurt",
+    "sounds": [
+      "mamaaaaaaa:death"
+    ]
+  }
+}
